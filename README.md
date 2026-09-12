@@ -2,8 +2,10 @@
 
 A type-safe, minimal TypeScript ORM for PostgreSQL (`@mokshasai0108/light-orm`) built from scratch within an npm workspace monorepo, paired with a full-stack reference Todo application.
 
+> 🚀 **Live Demo**: [https://light-orm.onrender.com/](https://light-orm.onrender.com/)  
+> 📦 **GitHub Repository**: [https://github.com/Mokshasai0108/light-orm](https://github.com/Mokshasai0108/light-orm)
 
-## Repository Structure
+---
 
 ```text
 light-orm/
