@@ -1,0 +1,27 @@
+{
+  "name": "orm-project",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Monorepo: light-orm (lightweight TypeScript ORM) + todo-app (reference application)",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "postinstall": "npm install --prefix apps/todo-app/frontend",
+    "build": "npm run build --workspace=@YOUR_USERNAME/light-orm && npm run build --workspace=todo-app-server",
+    "build:orm": "npm run build --workspace=@YOUR_USERNAME/light-orm",
+    "test": "npm run test --workspaces --if-present",
+    "test:orm": "npm run test --workspace=@YOUR_USERNAME/light-orm",
+    "test:app": "npm run test --workspace=todo-app-server",
+    "dev:server": "npm run dev --workspace=todo-app-server",
+    "dev:frontend": "npm run dev --prefix apps/todo-app/frontend",
+    "lint": "npm run lint --workspaces --if-present"
+  },
+  "devDependencies": {
+    "typescript": "^5.5.4"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

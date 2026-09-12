@@ -1,0 +1,54 @@
+{
+  "name": "@YOUR_USERNAME/light-orm",
+  "version": "0.1.0",
+  "description": "A tiny, type-safe TypeScript ORM for PostgreSQL. No code generation, no decorators, no magic — a defineModel() call gives you fully inferred CRUD + filtering.",
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "dev": "tsc -p tsconfig.build.json --watch",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:types": "vitest run --typecheck",
+    "prepublishOnly": "npm run build && npm run test"
+  },
+  "keywords": [
+    "orm",
+    "postgres",
+    "typescript",
+    "type-safe",
+    "query-builder"
+  ],
+  "dependencies": {
+    "pg": "^8.12.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.0",
+    "@types/pg": "^8.11.6",
+    "typescript": "^5.5.4",
+    "vitest": "^2.0.5"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/YOUR_USERNAME/orm-project.git",
+    "directory": "packages/light-orm"
+  }
+}
