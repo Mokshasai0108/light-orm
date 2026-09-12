@@ -29,10 +29,11 @@ export function createApp(db: Pick<AppDatabase, "todo">): Express {
     });
   }
 
-  // Centralized error handler so a rejected promise in a route doesn't crash the process.
+  // Centralized error handler
   app.use((err: unknown, _req: express.Request, res: express.Response, _next: express.NextFunction) => {
-    console.error(err);
-    res.status(500).json({ error: "Internal server error." });
+    console.error("API Error:", err);
+    const message = err instanceof Error ? err.message : "Internal server error.";
+    res.status(500).json({ error: message });
   });
 
   return app;
