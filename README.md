@@ -158,7 +158,7 @@ npm run test:app
 ## Deployment & Links
 
 - **npm Package**: `@mokshasai0108/light-orm` (configured in `packages/light-orm/package.json`)
-- **Live Demo**: `https://your-todo-app-deployment-url.com`
+- **Live Demo**: `https://light-orm.onrender.com`
 - **GitHub Repository**: `https://github.com/Mokshasai0108/light-orm`
 
 ---
