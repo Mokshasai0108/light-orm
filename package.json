@@ -11,6 +11,7 @@
     "postinstall": "npm install --prefix apps/todo-app/frontend",
     "build": "npm run build --workspace=@YOUR_USERNAME/light-orm && npm run build --workspace=todo-app-server",
     "build:orm": "npm run build --workspace=@YOUR_USERNAME/light-orm",
+    "start": "npm run start --workspace=todo-app-server",
     "test": "npm run test --workspaces --if-present",
     "test:orm": "npm run test --workspace=@YOUR_USERNAME/light-orm",
     "test:app": "npm run test --workspace=todo-app-server",
